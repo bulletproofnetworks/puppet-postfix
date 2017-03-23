@@ -34,8 +34,6 @@ class postfix::mta (
 
   validate_re($relayhost, '^\S+$',
               'Wrong value for $relayhost')
-  validate_re($smtp_use_tls, '^\S+$',
-              'Wrong value for $smtp_use_tls')
   validate_re($mydestination, '^\S+(?:,\s*\S+)*$',
               'Wrong value for $mydestination')
   validate_re($mynetworks, '^(?:\S+?(?:(?:,\s)|(?:\s))?)*$',
