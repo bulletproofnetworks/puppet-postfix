@@ -30,8 +30,6 @@ class postfix::satellite (
 ) {
 
   validate_re($postfix::myorigin, '^\S+$')
-  validate_re($postfix::smtp_use_tls, '^\S+$',
-              'Wrong value for $smtp_use_tls')
 
   class { '::postfix::mta':
     mydestination => $mydestination,
